@@ -1,6 +1,3 @@
-/* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-Database Load Issues (follow if receiving permission denied when running SQL code below)
-
 Possible Errors: 
 - ERROR >>  duplicate key value violates unique constraint "company_dim_pkey"
 - ERROR >> could not open file "C:\Users\...\company_dim.csv" for reading: Permission denied
@@ -28,7 +25,7 @@ Possible Errors:
 
 */
 
--- NOTE: This has been updated from the video to fix issues with encoding
+-- NOTE: This has been updated to fix issues with encoding
 COPY company_dim
 FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\company_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
